@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="712.0" prefWidth="957.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yatzy.YatzyController">
+  <tabs>
+    <Tab text="yatzy">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutY="-2.0" prefHeight="685.0" prefWidth="957.0">
+                     <children>
+                        <Label fx:id="nameLabel" prefHeight="18.0" prefWidth="958.0" text="Label">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="instructionLabel" prefHeight="18.0" prefWidth="970.0" text="Label">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin></Label>
+                        <HBox prefHeight="612.0" prefWidth="958.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="612.0" prefWidth="608.0">
+                                 <children>
+                                    <Button fx:id="rollDice" mnemonicParsing="false" onAction="#rollButton" prefHeight="106.0" prefWidth="268.0" text="ROLL DICE">
+                                       <font>
+                                          <Font size="41.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="30.0" top="30.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle fx:id="rectangle0" arcHeight="5.0" arcWidth="5.0" fill="#e8ff1f" height="80.0" layoutX="34.0" layoutY="61.0" stroke="#e8ff1f" strokeType="INSIDE" width="80.0" />
+                                          <Rectangle fx:id="rectangle1" arcHeight="5.0" arcWidth="5.0" fill="#e8ff1f" height="80.0" layoutX="149.0" layoutY="61.0" stroke="#e8ff1f" strokeType="INSIDE" width="80.0" />
+                                          <Rectangle fx:id="rectangle2" arcHeight="5.0" arcWidth="5.0" fill="#e8ff1f" height="80.0" layoutX="265.0" layoutY="61.0" stroke="#e8ff1f" strokeType="INSIDE" width="80.0" />
+                                          <Rectangle fx:id="rectangle3" arcHeight="5.0" arcWidth="5.0" fill="#e8ff1f" height="80.0" layoutX="380.0" layoutY="61.0" stroke="#e8ff1f" strokeType="INSIDE" width="80.0" />
+                                          <Rectangle fx:id="rectangle4" arcHeight="5.0" arcWidth="5.0" fill="#e8ff1f" height="80.0" layoutX="495.0" layoutY="61.0" stroke="#e8ff1f" strokeType="INSIDE" width="80.0" />
+                                          <HBox alignment="CENTER" layoutY="1.0" prefHeight="198.0" prefWidth="610.0">
+                                             <children>
+                                                <Button fx:id="die0" mnemonicParsing="false" onAction="#die0Press" prefHeight="75.0" prefWidth="75.0">
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="die1" mnemonicParsing="false" onAction="#die1Press" prefHeight="75.0" prefWidth="75.0">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" right="20.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="die2" mnemonicParsing="false" onAction="#die2Press" prefHeight="75.0" prefWidth="75.0">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" right="20.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="die3" mnemonicParsing="false" onAction="#die3Press" prefHeight="75.0" prefWidth="75.0">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" right="20.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="die4" mnemonicParsing="false" onAction="#die4Press" prefHeight="75.0" prefWidth="75.0">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                   <cursor>
+                                                      <Cursor fx:constant="DEFAULT" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="612.0" prefWidth="330.0">
+                                 <children>
+                                    <ListView fx:id="scoreItemListView" prefHeight="503.0" prefWidth="330.0" />
+                                    <Button fx:id="scoreItemListViewButton" mnemonicParsing="false" onAction="#scoreItemListViewButtonPress" text="CHOOSE SCORING METHOD">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="ScoreBoard">
+         <content>
+            <ScrollPane fx:id="scoreBoardScroll" prefHeight="200.0" prefWidth="200.0" />
+         </content>
+    </Tab>
+  </tabs>
+</TabPane>
